@@ -1,0 +1,40 @@
+{{ define "start" }}
+{{ template "header" }}
+
+<a name="" id="" class="btn btn-primary" href="/create" role="button">Add product</a>
+<br/><br/>
+    <table class="table">
+      <thead>
+        <tr>
+        <th>SKU</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Imageurl</th>
+        <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+    {{range.}}
+        <tr>
+          <th>{{.SKU}}</th>
+          <th>{{.Name}}</th>
+          <th>{{.Brand}}</th>
+          <th>{{.Size}}</th>
+          <th>{{.Price}}</th>
+          <th>{{.Imageurl}}</th>
+          <th>
+          <a name="" id="" class="btn btn-warning" href="/edit?SKU={{.SKU}}" role="button">Edit</a>
+          |
+          <a name="" id="" class="btn btn-danger" href="/delete?SKU={{.SKU}}" role="button">Delete</a>
+        </tr>
+        {{end}}
+
+
+      </tbody>
+    </table>
+
+{{ template "footer" }}
+{{end}}

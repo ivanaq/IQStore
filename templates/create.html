@@ -1,0 +1,67 @@
+{{ define "create"}}
+{{ template "header"}}
+
+<div class="card">
+    
+    <div class="card-header">        Products    </div>
+    <div class="card-body">
+        <form method="post" action="/insert">
+
+            <div class="form-group">
+              <label for="">SKU:</label>
+              <input type="text"
+                class="form-control" name="sku" id="sku" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Complete sku</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Name:</label>
+              <input type="text"
+                class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Complete name</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Brand:</label>
+              <input type="text"
+                class="form-control" name="brand" id="brand" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Complete brand</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Size:</label>
+              <input type="text"
+                class="form-control" name="size" id="size" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Complete size</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Price:</label>
+              <input type="text"
+                class="form-control" name="price" id="price" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Complete price</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Imageurl:</label>
+              <input type="text"
+                class="form-control" name="imageurl" id="imageurl" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Complete imageurl</small>
+            </div>
+
+            <button type="submit" class="btn btn-success">Add new product</button>
+
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Cancel</a>
+        </form>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+{{ template "footer"}}
+{{end}}
